@@ -311,7 +311,7 @@ design and code an iOS 11 app.</string>
                                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="rOe-Ew-q2I" userLabel="sectionCell">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="rOe-Ew-q2I" userLabel="sectionCell" customClass="SectionCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="304" height="248"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -391,6 +391,11 @@ design and code an iOS 11 app.</string>
                                                             <constraint firstAttribute="bottomMargin" secondItem="0fs-y9-klL" secondAttribute="bottom" id="rcd-bf-qNu"/>
                                                         </constraints>
                                                         <size key="customSize" width="304" height="248"/>
+                                                        <connections>
+                                                            <outlet property="captionLabel" destination="uQk-5c-qpZ" id="fSz-ga-1bU"/>
+                                                            <outlet property="coverImageView" destination="Nue-vD-qfg" id="5eb-sQ-LGU"/>
+                                                            <outlet property="titleLabel" destination="ZOH-j1-Iu3" id="bOR-y3-OZX"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
