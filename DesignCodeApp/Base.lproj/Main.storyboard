@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -297,23 +298,115 @@ design and code an iOS 11 app.</string>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqm-KR-2g8">
-                                                <rect key="frame" x="20" y="82" width="304" height="248"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-GA-tLo" userLabel="Chapter Collection View">
+                                                <rect key="frame" x="0.0" y="82" width="375" height="248"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="304" id="Rb6-95-CeL"/>
-                                                    <constraint firstAttribute="height" constant="248" id="WSw-qR-RAv"/>
+                                                    <constraint firstAttribute="height" constant="248" id="RLh-vh-bqN"/>
                                                 </constraints>
-                                            </view>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="hMI-fm-Ulc">
+                                                    <size key="itemSize" width="304" height="248"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="rOe-Ew-q2I" userLabel="sectionCell">
+                                                        <rect key="frame" x="20" y="0.0" width="304" height="248"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-y9-klL">
+                                                                    <rect key="frame" x="8" y="8" width="288" height="232"/>
+                                                                    <subviews>
+                                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qua-CG-UPm">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="232"/>
+                                                                            <subviews>
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios11" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-vD-qfg">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="232"/>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn iOS 11 Design" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOH-j1-Iu3">
+                                                                                    <rect key="frame" x="20" y="20" width="248" height="76.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A complete guide to colors, typography and layout for iOS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-5c-qpZ">
+                                                                                    <rect key="frame" x="20" y="171" width="248" height="41"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="Nue-vD-qfg" firstAttribute="top" secondItem="qua-CG-UPm" secondAttribute="top" id="26S-jE-VxE"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="uQk-5c-qpZ" secondAttribute="bottom" constant="20" id="3ZK-MK-ysg"/>
+                                                                                <constraint firstItem="uQk-5c-qpZ" firstAttribute="leading" secondItem="qua-CG-UPm" secondAttribute="leading" constant="20" id="AA2-7Q-WkU"/>
+                                                                                <constraint firstItem="ZOH-j1-Iu3" firstAttribute="top" secondItem="qua-CG-UPm" secondAttribute="top" constant="20" id="ODq-s0-j7K"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="uQk-5c-qpZ" secondAttribute="trailing" constant="20" id="ZdA-Yk-7dG"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="ZOH-j1-Iu3" secondAttribute="trailing" constant="20" id="Zz4-0Q-xD1"/>
+                                                                                <constraint firstItem="ZOH-j1-Iu3" firstAttribute="leading" secondItem="qua-CG-UPm" secondAttribute="leading" constant="20" id="bT4-Cq-hr1"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="Nue-vD-qfg" secondAttribute="trailing" id="bal-AV-7LN"/>
+                                                                                <constraint firstItem="Nue-vD-qfg" firstAttribute="leading" secondItem="qua-CG-UPm" secondAttribute="leading" id="sw0-5N-SGx"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="Nue-vD-qfg" secondAttribute="bottom" id="wMe-LA-hZI"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                    <integer key="value" value="14"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="qua-CG-UPm" firstAttribute="top" secondItem="0fs-y9-klL" secondAttribute="top" id="DdO-io-Rnl"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="qua-CG-UPm" secondAttribute="bottom" id="SjF-Af-Mp9"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="qua-CG-UPm" secondAttribute="trailing" id="tav-kk-z2g"/>
+                                                                        <constraint firstItem="qua-CG-UPm" firstAttribute="leading" secondItem="0fs-y9-klL" secondAttribute="leading" id="u5a-Iw-RvZ"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                                            <real key="value" value="0.25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                            <size key="value" width="0.0" height="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                                            <integer key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="0fs-y9-klL" firstAttribute="leading" secondItem="rOe-Ew-q2I" secondAttribute="leadingMargin" id="Hyj-Tb-fcy"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="0fs-y9-klL" secondAttribute="trailing" id="bmr-KQ-Yio"/>
+                                                            <constraint firstItem="0fs-y9-klL" firstAttribute="top" secondItem="rOe-Ew-q2I" secondAttribute="topMargin" id="nkc-oO-44K"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="0fs-y9-klL" secondAttribute="bottom" id="rcd-bf-qNu"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="304" height="248"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="ytg-GA-tLo" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" id="37o-oz-5am"/>
+                                            <constraint firstItem="uNE-ko-EmN" firstAttribute="bottom" secondItem="ytg-GA-tLo" secondAttribute="bottom" constant="50" id="6CW-hc-m0B"/>
                                             <constraint firstAttribute="trailing" secondItem="XB1-3i-Yy9" secondAttribute="trailing" constant="20" id="AXu-Ti-OnD"/>
+                                            <constraint firstItem="ytg-GA-tLo" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" id="IKZ-pa-YlB"/>
                                             <constraint firstItem="XB1-3i-Yy9" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" constant="20" id="Jdq-c4-YQT"/>
-                                            <constraint firstItem="nqm-KR-2g8" firstAttribute="leading" secondItem="uNE-ko-EmN" secondAttribute="leading" constant="20" id="NOd-Wg-2Bk"/>
                                             <constraint firstAttribute="height" constant="380" id="Ram-vn-91E"/>
                                             <constraint firstItem="XB1-3i-Yy9" firstAttribute="top" secondItem="o6u-0J-K4I" secondAttribute="top" constant="50" id="W5m-Kt-dqz"/>
-                                            <constraint firstAttribute="bottom" secondItem="nqm-KR-2g8" secondAttribute="bottom" constant="50" id="Wav-an-5gI"/>
+                                            <constraint firstItem="uNE-ko-EmN" firstAttribute="bottom" secondItem="ytg-GA-tLo" secondAttribute="bottom" constant="50" id="Zz0-gi-RWq"/>
+                                            <constraint firstItem="uNE-ko-EmN" firstAttribute="trailing" secondItem="ytg-GA-tLo" secondAttribute="trailing" id="nlF-QC-ZMO"/>
+                                            <constraint firstItem="ytg-GA-tLo" firstAttribute="trailing" secondItem="uNE-ko-EmN" secondAttribute="trailing" id="zoA-XT-4M1"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="uNE-ko-EmN"/>
                                     </view>
@@ -345,7 +438,7 @@ design and code an iOS 11 app.</string>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="4MO-Rt-Nfc" id="7YI-13-ma8"/>
-                        <outlet property="bookView" destination="jcI-DP-diU" id="Kg3-9O-j7C"/>
+                        <outlet property="chapterCollectionView" destination="ytg-GA-tLo" id="EPt-7u-3Fq"/>
                         <outlet property="deviceImageView" destination="gsw-i8-LeU" id="OkJ-Vt-37U"/>
                         <outlet property="heroView" destination="ugQ-UG-w1A" id="Sjl-A9-LLK"/>
                         <outlet property="playVisualEffectView" destination="rpF-Np-hKC" id="Rx5-ml-sDD"/>
@@ -355,7 +448,7 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+            <point key="canvasLocation" x="136.80000000000001" y="132.23388305847078"/>
         </scene>
         <!--Section View Controller-->
         <scene sceneID="sbZ-px-ZGe">
@@ -378,5 +471,6 @@ design and code an iOS 11 app.</string>
         <image name="Art-Book" width="133" height="150"/>
         <image name="Art-iPhoneX" width="129" height="326"/>
         <image name="Home" width="2880" height="1600"/>
+        <image name="ios11" width="2880" height="1600"/>
     </resources>
 </document>
