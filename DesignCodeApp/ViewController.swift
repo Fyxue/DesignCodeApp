@@ -88,6 +88,8 @@ extension ViewController: UIScrollViewDelegate{
                 
                 let translationX = cellFrame.origin.x/5
                 cell.coverImageView.transform = CGAffineTransform(translationX: translationX, y: 0)
+                
+                cell.layer.transform = animateCell(cellFrame: cellFrame)
             }
         }
     }
@@ -108,7 +110,7 @@ extension ViewController: UIScrollViewDelegate{
         if scaleFromX < scaleMin{
             scaleFromX = scaleMin
         }
-        let scale = CATransform3DScale(transform, scaleFromX, scaleFromX, 0)
+        let scale = CATransform3DScale(CATransform3DIdentity, scaleFromX, scaleFromX, 1)
         return CATransform3DConcat(rotation, scale)
     }
 }
