@@ -16,6 +16,8 @@
 		9698CD291FBB5DE000501C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9698CD281FBB5DE000501C47 /* Assets.xcassets */; };
 		9698CD2C1FBB5DE000501C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */; };
 		96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECA89A1FDF177400DE9E40 /* SectionViewController.swift */; };
+		9CFE5E80209AA9E100A15880 /* TestimonialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE5E7F209AA9E100A15880 /* TestimonialViewController.swift */; };
+		9CFE5E82209AAA0B00A15880 /* TestimonialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE5E81209AAA0B00A15880 /* TestimonialCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9698CD2B1FBB5DE000501C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9698CD2D1FBB5DE000501C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96ECA89A1FDF177400DE9E40 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		9CFE5E7F209AA9E100A15880 /* TestimonialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialViewController.swift; sourceTree = "<group>"; };
+		9CFE5E81209AAA0B00A15880 /* TestimonialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				9698CD1E1FBB5DE000501C47 /* AppDelegate.swift */,
 				9698CD201FBB5DE000501C47 /* ViewController.swift */,
 				96ECA89A1FDF177400DE9E40 /* SectionViewController.swift */,
+				9CFE5E7F209AA9E100A15880 /* TestimonialViewController.swift */,
+				9CFE5E81209AAA0B00A15880 /* TestimonialCollectionViewCell.swift */,
 				1E270344207D665E0096F230 /* SectionCollectionViewCell.swift */,
 				1E270340207D61E30096F230 /* Data.swift */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
@@ -152,7 +158,9 @@
 				1E270341207D61E30096F230 /* Data.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
+				9CFE5E80209AA9E100A15880 /* TestimonialViewController.swift in Sources */,
 				1E270345207D665E0096F230 /* SectionCollectionViewCell.swift in Sources */,
+				9CFE5E82209AAA0B00A15880 /* TestimonialCollectionViewCell.swift in Sources */,
 				9698CD271FBB5DE000501C47 /* DesignCodeApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

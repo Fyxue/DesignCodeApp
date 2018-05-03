@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -298,8 +298,8 @@ design and code an iOS 11 app.</string>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-GA-tLo" userLabel="Chapter Collection View">
-                                                <rect key="frame" x="0.0" y="76" width="375" height="248"/>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-GA-tLo" userLabel="Chapter Collection View">
+                                                <rect key="frame" x="0.0" y="82" width="375" height="248"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="248" id="RLh-vh-bqN"/>
@@ -480,12 +480,12 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0S-gs-5ZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="-467"/>
+            <point key="canvasLocation" x="929" y="-467"/>
         </scene>
-        <!--View Controller-->
+        <!--Testimonial View Controller-->
         <scene sceneID="rmI-oA-bpE">
             <objects>
-                <viewController id="afZ-2x-kBO" sceneMemberID="viewController">
+                <viewController id="afZ-2x-kBO" customClass="TestimonialViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQ3-b1-zBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,20 +493,20 @@ design and code an iOS 11 app.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmx-y2-ZqI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="524"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-yJ-JEI">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-yJ-JEI">
                                         <rect key="frame" x="0.0" y="50" width="375" height="235"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="235" id="p7j-BG-yxT"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="fYC-os-eI4">
-                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="itemSize" width="304" height="235"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="testimonialCell" id="ebg-ch-Z8S">
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="testimonialCell" reuseIdentifier="testimonialCell" id="ebg-ch-Z8S" customClass="TestimonialCollectionViewCell" customModule="DesignCodeApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="0.0" width="304" height="235"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -605,27 +605,67 @@ design and code an iOS 11 app.</string>
                                                     <constraint firstItem="nZY-8a-I4c" firstAttribute="top" secondItem="ebg-ch-Z8S" secondAttribute="top" id="vkj-Mo-jnD"/>
                                                 </constraints>
                                                 <size key="customSize" width="304" height="235"/>
+                                                <connections>
+                                                    <outlet property="avatarImageView" destination="gZF-gR-0uI" id="txS-SA-c4d"/>
+                                                    <outlet property="jobLabel" destination="VxK-1r-iTe" id="Ygn-8E-9cY"/>
+                                                    <outlet property="nameLabel" destination="UrV-ce-2xu" id="L6p-4F-bgf"/>
+                                                    <outlet property="textLabel" destination="UrV-ce-2xu" id="eD3-5o-O0O"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="26,000 people " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-LN-SYG">
-                                        <rect key="frame" x="40" y="319" width="156" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="are learning from design+code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfH-dS-Rrv">
-                                        <rect key="frame" x="40" y="356" width="223" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="go1-bB-V5c">
+                                        <rect key="frame" x="67.5" y="335" width="240" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26,000 people " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-LN-SYG">
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="are learning from design+code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfH-dS-Rrv">
+                                                <rect key="frame" x="0.0" y="36" width="222.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3td-IO-424">
+                                                <rect key="frame" x="0.0" y="72" width="240" height="3"/>
+                                                <color key="backgroundColor" red="0.68627450980000004" green="0.2784313725" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="Cia-w2-u6T"/>
+                                                    <constraint firstAttribute="height" constant="3" id="Rgi-Lw-234"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="1.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="esU-8J-mOV">
+                                        <rect key="frame" x="24.5" y="430" width="326.5" height="44"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Google" translatesAutoresizingMaskIntoConstraints="NO" id="arI-O6-Vnz">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Apple" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-RO-iND">
+                                                <rect key="frame" x="150" y="0.0" width="36" height="44"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo-Stripe" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-8Q-pwy">
+                                                <rect key="frame" x="245.5" y="0.0" width="81" height="44"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="esU-8J-mOV" firstAttribute="centerX" secondItem="gmx-y2-ZqI" secondAttribute="centerX" id="2km-au-c8c"/>
+                                    <constraint firstItem="go1-bB-V5c" firstAttribute="top" secondItem="8IM-yJ-JEI" secondAttribute="bottom" constant="50" id="DQA-qN-UOT"/>
                                     <constraint firstItem="8IM-yJ-JEI" firstAttribute="top" secondItem="gmx-y2-ZqI" secondAttribute="top" constant="50" id="Et8-rZ-pNg"/>
+                                    <constraint firstAttribute="bottom" secondItem="esU-8J-mOV" secondAttribute="bottom" constant="50" id="VKf-IJ-bt8"/>
+                                    <constraint firstItem="go1-bB-V5c" firstAttribute="centerX" secondItem="gmx-y2-ZqI" secondAttribute="centerX" id="ei4-Dd-8cK"/>
                                     <constraint firstItem="8IM-yJ-JEI" firstAttribute="leading" secondItem="gmx-y2-ZqI" secondAttribute="leading" id="fUk-uX-9B0"/>
                                     <constraint firstAttribute="trailing" secondItem="8IM-yJ-JEI" secondAttribute="trailing" id="nrA-gu-ZHR"/>
                                 </constraints>
@@ -638,7 +678,11 @@ design and code an iOS 11 app.</string>
                             <constraint firstItem="gmx-y2-ZqI" firstAttribute="top" secondItem="HQ3-b1-zBB" secondAttribute="top" id="gns-2G-PoT"/>
                             <constraint firstItem="gmx-y2-ZqI" firstAttribute="leading" secondItem="HQ3-b1-zBB" secondAttribute="leading" id="jpR-f1-Kno"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZhD-XF-mK0"/>
                     </view>
+                    <connections>
+                        <outlet property="testimonialCollectionView" destination="8IM-yJ-JEI" id="A1c-Jh-rD2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnN-YV-Qmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -650,6 +694,9 @@ design and code an iOS 11 app.</string>
         <image name="Art-Book" width="133" height="150"/>
         <image name="Art-iPhoneX" width="129" height="326"/>
         <image name="Home" width="2880" height="1600"/>
+        <image name="Logo-Apple" width="36" height="44"/>
+        <image name="Logo-Google" width="100" height="37"/>
+        <image name="Logo-Stripe" width="81" height="33"/>
         <image name="Quote-Begin" width="23" height="18"/>
         <image name="Quote-End" width="12" height="9"/>
         <image name="ios11" width="2880" height="1600"/>
